@@ -34,7 +34,6 @@ Add the import statements to your ViewController's code:
 
 ```Swift
 import w3w
-import W3WSwiftApi
 import W3WSwiftComponents
 import W3WSwiftComponentsSdk
 ```
