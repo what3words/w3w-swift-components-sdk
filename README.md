@@ -13,6 +13,7 @@ Include this in your project, and it will provide some protocol extensions and c
 Example: AutoSuggest Text Field
 ---------------------- 
 <img src="Documentation/autosuggest.png" width="200" style="float: right; padding: 16px;">
+
 `W3WAutoSuggestTextField` is a `UITextField` that will suggest three word addresses as the user types.  
 
 Documentation for `W3WAutoSuggestTextField` as well as other components you may use can be found in the [components library](https://github.com/what3words/w3w-swift-components).
@@ -25,7 +26,7 @@ Include `w3w.xcframework` in your Xcode project as per the `readme.txt` in the S
 
 Add this Swift Package to your project:
 
-<img src="Documentation/swiftpm.png" width="640" padding: 16px;">
+<img src="Documentation/swiftpm.png" width="640" style="padding: 16px;">
 
 ### Step 3:
 
