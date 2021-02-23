@@ -72,13 +72,18 @@ extension What3Words: W3WProtocolV3 {
   /// - parameter northEast: The northeast corner of the box
   /// - parameter completion: code block whose parameters contain an array of W3WLines (in lat/long) for drawing the what3words grid over a map, and , if any, an error
   public func gridSection(southWest: CLLocationCoordinate2D, northEast: CLLocationCoordinate2D, completion: @escaping W3WGridResponse) {
-    completion(gridSection(southWest: southWest, northEast: northEast), nil)
+    do {
+      let grid = try gridSection(southWest: southWest, northEast: northEast)
+      completion(grid, nil)
+    } catch {
+      completion([], convert(error: error))
+    }
   }
   
 
   
   public func gridSection(south_lat: Double, west_lng: Double, north_lat: Double, east_lng: Double, completion: @escaping W3WGridResponse) {
-    completion(gridSection(southWest: CLLocationCoordinate2D(latitude: south_lat, longitude: west_lng), northEast: CLLocationCoordinate2D(latitude: north_lat, longitude: east_lng)), nil)
+    gridSection(southWest: CLLocationCoordinate2D(latitude: south_lat, longitude: west_lng), northEast: CLLocationCoordinate2D(latitude: north_lat, longitude: east_lng), completion: completion)
   }
   
   
