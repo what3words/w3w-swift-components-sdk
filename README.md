@@ -1,5 +1,14 @@
 # <img valign='top' src="https://what3words.com/assets/images/w3w_square_red.png" width="64" height="64" alt="what3words">&nbsp;w3w-swift-components-sdk
 
+Depreciated
+-----------
+
+The code that was in this package has been moved into [w3w-swift-components](https://github.com/what3words/w3w-swift-components).
+
+It is enclosed in a compile time conditional so that it will be included if the What3Words SDK is present, otherwise it will not compile into the project.
+
+You may safely remove this package as a dependancy from your project, and add [w3w-swift-components](https://github.com/what3words/w3w-swift-components) in it's place if it's not already there.
+
 Overview
 --------
 
